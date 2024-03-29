@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="../static/css/about.css">
+
+<title>{{name}} | ICTLab</title>
+
+{% extends "template.html" %}
+{% block content %}
+<div class="first">
+    <img class="phone phoneimg" src="../static/img/3_20220519125016-removebg-preview.png">
+    <div class="philosophy">
+        <img class="pc pcimg" src="../static/img/3_20220519125016-removebg-preview.png">
+        <div class=" contents">
+            <h3>ラボにおけるすべての活動に大人の事情は介入せず、</h3>
+            <h3>分野を超え組織を超えリアルとバーチャルをつなぎ</h3>
+            <h3>様々な思想や技術を持ったメンバーが</h3>
+            <h3>楽しみながら未来を創る。</h3>
+        </div>
+    </div>
+    <h2 class="pc">ICTラボは生徒の興味によって成り立つ次世代型オープンスペース研究室です。</h2>
+    <h2 class="phone">ICTLabは未来を創る<br>オープンスペース研究室です。</h2>
+</div>
+<div class="news-banner">
+    <div class="news-banner__content">
+        <h1>Information Communication Technology Laboratory</h1>
+    </div>
+</div>
+<div class="second">
+    <h2>研究分野</h2>
+    <div class="programming">
+        <h3>プログラミング班</h3>
+        <p>この数十年で書類作成やファイル管理など、パソコンを利用する力は必須となってきました。同じように、プログラミングの知識はこれからの生活で必須となってくるでしょう。自分で作りたい物を考え自力で実装することで、次世代の情報システムや情報科学を学びます。</p>
+    </div>
+    <div class="3d">
+        <h3>3Dモデリング班</h3>
+        <p>メタバースやWeb3などこれからの世界はだんだんと仮想化していきます。その中で自ら物(オブジェクト)を創るという経験を通して3Dオブジェクトの扱い方を学習します。</p>
+    </div>
+    <div class="server">
+        <h3>サーバー管理班</h3>
+        <p>社内システムやゲームシステムの運用にはサーバー管理が欠かせません。ICTLabでは独自のサーバーを各メンバーが自分で保守・運用をすることでLinuxサーバーの使い方に慣れるほか、ネットワークやセキュリティなどの仕組みを学びます。</p>
+    </div>
+</div>
+{% endblock %}

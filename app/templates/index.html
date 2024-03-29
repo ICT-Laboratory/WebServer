@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="../static/css/index.css">
+<title>{{name}} | ICTLab</title>
+
+{% extends "template.html" %}
+{% block content %}
+<img src="../static/img/people-4259948_1920.jpg" id="images">
+<div class="second">
+    <div class="box">
+        <div class="right fadein-before" id="fadein">
+            <br>
+            <br>
+            <br>
+            <p>"やりたいことを自由に"</p>
+            <p>リアルとバーチャル</p>
+            <p>人とテクノロジー</p>
+            <p>距離を超え文化を超え世界を超え</p>
+            <p>やりたいことを追求する</p>
+            <p>ようこそICTLabへ</p>
+            <br>
+            <a href="{{url_for('all_page',path='about')}}"><p><div class="about">ICTLabについて詳しく見る→</div></p></a>
+            <br>
+            <br>
+        </div>
+        <img class="pc" src="../static/img/earth-2254769_960_720.jpg">
+    </div>
+</div>
+<div class="third">
+    <div id="main">
+        <div class="service">
+            <h1>Service</h1>
+            <p>サービス</p>
+        </div>
+        <p>あなたの興味を力に変える</p>
+        <p>AI・データサイエンスを用いた問題解決</p>
+        <p>3DCGの作成</p>
+        <p>ICT技術を用いた新しい教育の場の作成など</p>
+        <p>お気軽にご相談ください</p>
+        <br>
+        <a href="{{url_for('all_page',path='service')}}"><p class="service"><u>サービスについて詳しく見る→</u></p></a>
+    </div>
+    <img class="pc" src="../static/img/teamwork-3213924_1920.jpg">
+</div>
+<div class="fourth">
+    <h2 class="title">
+        <span class="newsEn">NEWS</span>
+        <span class="newsJp">ニュース</span>
+    </h2>
+    <ul class="news">
+        <li>
+            <a class="content" href="#">
+                <time class="newstime">2021.10.10</time>
+                <div>年末年始はホロライブが盛りだくさん！特別番組「年末ホロライブ〜ゆくホロくるホロ 2023▷2024〜」を12月31日（日）に配信決定！！</div>
+            </a>
+        </li>
+        <li>
+            <a class="content" href="#">
+                <time class="newstime">2021.10.10</time>
+                <div>新卒・インターン向け採用特設サイトをオープン！</div>
+            </a>
+        </li>
+    </ul>
+</div>
+<script>
+    //フェードインさせる要素を取得
+    const FADEIN_ELEM = document.getElementById('fadein');
+
+    //スクロール時に要素をフェードインさせるイベントを設定する
+    window.addEventListener('scroll', () => {
+        //フェードインする要素の上部の位置を取得する
+        const FADEIN_ELEM_TOP = FADEIN_ELEM.getBoundingClientRect().top;
+        //ブラウザの高さを取得
+        const WINDOW_HEIGHT = window.innerHeight;
+        //画面に表示された時にフェードインさせる処理
+        if (WINDOW_HEIGHT > (FADEIN_ELEM_TOP + 280)) {
+            FADEIN_ELEM.classList.add('fadein-after');
+        }else{
+            FADEIN_ELEM.classList.remove('fadein-after');
+        }
+    });
+</script>
+{% endblock %}

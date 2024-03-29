@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/828286173700816947/976693328487792651/3_20220519125016.png">
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' ,_external=True) }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alexandria&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+        <!-- MarkDownパーサー&それに対応するcss-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/solarized-dark.min.css">
+        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <!-- highlight.js -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <meta name="google-site-verification" content="ylU_HeoOz5d5aWgaDJLPOQgSuLi0GWpVhBu6oPGhBmk" />
+    </head>
+    <body>
+        <header>
+            <div class="pc">
+                <ul>
+                    <li><a href="{{url_for('home')}}"><h1>ICTLab</h1></a></li>
+                    <li><a href="{{url_for('all_page',path='about')}}"><p>研究室概要</p></a></li>
+                    <!-- <li><a href="{{url_for('all_page',path='service')}}"><p>サービス</p></a></li> -->
+                    <li><a href="{{url_for('all_page',path='adoption')}}"><p>採用情報</p></a></li>
+                </ul>
+            </div>
+            <div class="phone">
+                <a href="{{url_for('home')}}"><h1>ICTLab</h1></a>
+            </div>
+        </header>
+        <main>
+            <div id="space"></div>
+            {% block content %}
+            <!-- main -->
+            {% endblock %}
+        </main>
+        <footer>
+            <h2>東洋大学付属牛久高等学校ICTLab</h2>
+            <ul>
+                <li><a href="https://www.toyo.ac.jp/ushiku/sh/access/">アクセス</a></li>
+                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="https://www.toyo.ac.jp/ushiku/sh/">東洋大学付属牛久中等・高等学校について</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

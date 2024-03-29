@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="../static/css/blog.css">
+<title>{{name}} | ICTLab</title>
+
+{% extends "template.html" %}
+{% block content %}
+<div id="content"></div>
+<script>
+    markdown_text = marked.parse({{text|tojson}});
+    document.getElementById('content').innerHTML = markdown_text;
+</script>
+<div id="space"></div>
+{% endblock %}

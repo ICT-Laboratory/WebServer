@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/service.css',_external=True) }}">
+<title>{{name}} | ICTLab</title>
+
+{% extends "template.html" %}
+{% block content %}
+
+<div class="blogframe">
+    <p>{{path}}</p>
+    <h2>Members Blogs</h2>
+    <div class="blogs">
+        {% for i in blogs %}
+        <div class="blog">
+            <a href="{{url_for('blog_view',path=i['blog_id'])}}">
+                <img src="{{i['thumbnail']}}">
+                <h3 class="title">{{i['title']}}</h3>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="viewmore">
+        <a href="#">さらに見る→</a>
+    </div>
+    <div id="space"></div>
+    <div id="space"></div>
+</div>
+{% endblock %}

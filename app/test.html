@@ -1,0 +1,38 @@
+<h1 id='fadein' class="fadein-before">フェードイン</h1>
+<style>
+    .fadein-before{
+    /*透過度の設定。0で表示されなくなる。*/
+    opacity: 0;
+    /*要素を左に100pxずらしたところに配置する*/
+    transform:translateX(-100px);
+    /*透過度と表示位置を1秒かけて変化させる*/
+    transition:opacity 1s,transform 1s;
+}
+
+.fadein-after{
+    /*透過度の設定。非表示から表示にする。*/
+    opacity: 1;
+    /*要素を100px左にしていたのを元の位置に戻す*/
+    transform: translate(0);
+}
+
+</style>
+
+<script>
+    //フェードインさせる要素を取得
+    const FADEIN_ELEM = document.getElementById('fadein');
+
+    //スクロール時に要素をフェードインさせるイベントを設定する
+    window.addEventListener('scroll', () => {
+        //フェードインする要素の上部の位置を取得する
+        const FADEIN_ELEM_TOP = FADEIN_ELEM.getBoundingClientRect().top;
+        //ブラウザの高さを取得
+        const WINDOW_HEIGHT = window.innerHeight;
+        //画面に表示された時にフェードインさせる処理
+        if (WINDOW_HEIGHT > (FADEIN_ELEM_TOP + 200)) {
+            FADEIN_ELEM.classList.add('fadein-after');
+        }else{
+            FADEIN_ELEM.classList.remove('fadein-after');
+        }
+    });
+</script>

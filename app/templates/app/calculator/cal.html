@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/app/calculator/stylesheet 2.css')}}">
+    <meta charset="utf-8">
+        <title>
+            図形が出る電卓
+        </title>
+    </head>
+    <body>
+        <header>電卓モード</header>
+        <main>
+        <input type="button"value="ホームに戻る"onClick="location.href='./index.html'"><br>
+        <form name ='calculator'>
+                <input type="textfield" name="ans" value=""><br>
+                <input type="button"value="7" onclick="document.calculator.ans.value+='7'">
+                <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+                <input type="button" value="9" onClick="document.calculator.ans.value+='9'"><br>
+                <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+                <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+                <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+                <input type="button" value="-" onClick="document.calculator.ans.value+='-'"><br>
+                <input type="button" value="1" onClick="document.calculator.ans.value+='2'">
+                <input type="button" value="2" onClick="document.calculator.ans.value+='1'">
+                <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+                <input type="button" value="＋" onClick="document.calculator.ans.value+='+'"><br>
+                <input type="button" value="×" onClick="document.calculator.ans.value+='*'">
+                <input type="button" value="÷" onClick="document.calculator.ans.value+='/'">
+                <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+                <input type="reset" value="AC">
+                <input type="button" value="＝" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+        </form>
+    </main>
+    <footer></footer>
+    </body>
