@@ -6,6 +6,7 @@ docker composeでWebサーバーの構築の自動化
 - docker-compose
 - python3
 - flask
+- pip
 
 # コマンド
 ```
