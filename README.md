@@ -4,6 +4,8 @@ docker composeでWebサーバーの構築の自動化
 # 前提条件
 - docker
 - docker-compose
+- python3
+- flask
 
 # コマンド
 ```
