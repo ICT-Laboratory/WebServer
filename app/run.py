@@ -97,11 +97,6 @@ def webapp(dirname, filename):
 def store():
     return render_template("ECsite/home.html")
 
-
-@app.route("/.well-known/acme-challenge/Xv4qeNwPiY9U-Z_Vn2gASPc160q24U2m-s7R_uNAezk")
-def ssl():
-    return "Xv4qeNwPiY9U-Z_Vn2gASPc160q24U2m-s7R_uNAezk.pyhsdZOqfHUU5gBKC6xDBU2HFqQQbDiN3p6SKuZ9mKY"
-
 @app.route("/robots.txt")
 def robots():
     return render_template("robots.txt")
