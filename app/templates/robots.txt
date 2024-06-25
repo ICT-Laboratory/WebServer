@@ -1,6 +1,0 @@
-User-Agent:*
-Disallow:
-
-Sitemap:https://ict-lab.toyo-ushiku.jp/
-Sitemap:https://ict-lab.toyo-ushiku.jp/about
-Sitemap:https://ict-lab.toyo-ushiku.jp/service
