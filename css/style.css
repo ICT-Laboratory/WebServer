@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+header {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+@media screen and (max-width: 480px) {
+    .pc {
+        display: none;
+    }
+}
+@media screen and (min-width: 481px) {
+    .phone {
+        display: none;
+    }
+    
+}
+header {
+    font-family: Michroma;
+}
+header h1 {
+    color: rgb(0, 0, 255);
+}
+header ul {
+    padding-left: 10px;
+    margin: 0px;
+}
+header p {
+    color: #000;
+}
+header li {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 0px 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+}
+.phone h1 {
+    text-align: center;
+}
+footer {
+    color: #fff;
+    text-align: center;
+    background-color: #17194C;
+    padding: 50px 0;
+}
+footer li {
+    display: inline-block;
+    margin: 0px 15px;
+    text-decoration: none;
+}
+footer li a {
+    color: white;
+}
+footer li a:hover {
+    color: blue;
+}
+#space {
+    height: 100px;
+}

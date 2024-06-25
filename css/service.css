@@ -1,0 +1,30 @@
+.blogframe {
+    width:90%;
+    margin: 0 auto 30px auto;
+}
+.blogframe h2 {
+    font-family: 'DotGothic16', sans-serif;
+}
+.blogs {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+.blog {
+    width: 400px;
+    height: auto;
+    margin: 20px;
+}
+.blog img {
+    width:100%;
+    height:56.25%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.blog .detail {
+    font-size: 0.7rem;
+}
+.viewmore {
+    text-align: right;
+}

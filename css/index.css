@@ -1,0 +1,157 @@
+img {
+    width: 100%;
+    background-color: aliceblue;
+    vertical-align: top;
+}
+.second {
+    background-color: #222222;
+}
+/* main .title {
+    color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    font-family: serif;
+    font-size: 300%;
+} */
+.box {
+    padding: 0px;
+    text-align: center;
+    display: flex;
+}
+.right .about {
+    background-color: blue;
+    color: white;
+}
+.right .about:hover {
+    background-color: #fff;
+    color: #000;
+}
+.third .service {
+    font-family: 'Zen Dots', cursive;
+    color: blue;
+    padding-bottom: 10px;
+}
+.third p{
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+.fourth {
+    background-color: #e7e7e7;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    padding: 50px 0 80px 0;
+}
+.fourth .title {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    width:90%;
+    margin: 0 auto;
+    padding-bottom: 24px;
+}
+.newsEn {
+    font-size: 2.3rem;
+    padding-top: 10px;
+}
+.newsJp {
+    font-size: 1.4rem;
+    padding-top: auto;
+}
+.news {
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    border-top: solid 1px #646464;
+}
+.news li {
+    border-bottom: solid 1px #646464;
+}
+.content {
+    display: block;
+    padding: 24px 16px;
+    color: #000;
+}
+.content time {
+    color: #888888;
+    font-weight:bold;
+}
+
+@media screen and (max-width: 480px) {
+    .pc {
+        display: none;
+    }
+    .second .right {
+        margin: 0 auto;
+        font-family: 'DotGothic16', sans-serif;
+    }
+    .second .right p {
+        color: #fff;
+    }
+    .third {
+        padding: 6%;
+    }
+    .content div {
+        margin: 5px 0;
+    }
+}
+@media screen and (min-width: 481px) {
+    .box div{
+        text-align: left;
+        display: inline-block;
+        padding: 0px;
+    }
+    .second .right {
+        color: #ffffff;
+        width: 40%;
+        font-family: 'DotGothic16', sans-serif;
+        font-size: 150%;
+        margin-left: 15%;
+    }
+    .second img {
+        width: 40%;
+        height: 40%;
+        margin-right: 10%;
+        margin-top: 150px;
+    }
+    .third {
+        display: flex;
+    }
+    .third #main {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 100px;
+        margin-bottom: 90px;
+    }
+    .third .service p {
+        font-family: sans-serif;
+    }
+    .third p {
+        font-size: 120%;
+    }
+    .third img {
+        width: 40%;
+        height: 40%;
+        margin-right: 5%;
+        padding-top: 180px;
+        background-color: #fff;
+    }
+    .content {
+        display: flex;
+    }
+    .content div {
+        padding: 0 25px;
+    }
+}
+.fadein-before{
+    /*透過度の設定。0で表示されなくなる。*/
+    opacity: 0;
+    /*要素を左に100pxずらしたところに配置する*/
+    transform:translateX(-100px);
+    /*透過度と表示位置を1秒かけて変化させる*/
+    transition:opacity 2s,transform 2s;
+}
+
+.fadein-after{
+    /*透過度の設定。非表示から表示にする。*/
+    opacity: 1;
+    /*要素を100px左にしていたのを元の位置に戻す*/
+    transform: translate(0);
+}

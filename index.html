@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/828286173700816947/976693328487792651/3_20220519125016.png">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alexandria&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/index.css">
+        <title>Home | ICTLab</title>
+
+        <!-- MarkDownパーサー&それに対応するcss-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/solarized-dark.min.css">
+        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <!-- highlight.js -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <meta name="google-site-verification" content="ylU_HeoOz5d5aWgaDJLPOQgSuLi0GWpVhBu6oPGhBmk" />
+    </head>
+    <body>
+        <header>
+            <div class="pc">
+                <ul>
+                    <li><a href="/index.html"><h1>ICTLab</h1></a></li>
+                    <li><a href="/about.html"><p>研究室概要</p></a></li>
+                    <!-- <li><a href="{{url_for('all_page',path='service')}}"><p>サービス</p></a></li> -->
+                    <li><a href="/adoption.html"><p>採用情報</p></a></li>
+                </ul>
+            </div>
+            <div class="phone">
+                <a href="/index.html"><h1>ICTLab</h1></a>
+            </div>
+        </header>
+        <main>
+            <div id="space"></div>
+            <img src="/img/people-4259948_1920.webp" id="images">
+            <div class="second">
+                <div class="box">
+                    <div class="right fadein-before" id="fadein">
+                        <br>
+                        <br>
+                        <br>
+                        <p>"やりたいことを自由に"</p>
+                        <p>リアルとバーチャル</p>
+                        <p>人とテクノロジー</p>
+                        <p>距離を超え文化を超え世界を超え</p>
+                        <p>やりたいことを追求する</p>
+                        <p>ようこそICTLabへ</p>
+                        <br>
+                        <a href="{{url_for('all_page',path='about')}}"><p><div class="about">ICTLabについて詳しく見る→</div></p></a>
+                        <br>
+                        <br>
+                    </div>
+                    <img class="pc" src="/img/earth-2254769_960_720.webp">
+                </div>
+            </div>
+            <div class="third">
+                <div id="main">
+                    <div class="service">
+                        <h1>Service</h1>
+                        <p>サービス</p>
+                    </div>
+                    <p>あなたの興味を力に変える</p>
+                    <p>AI・データサイエンスを用いた問題解決</p>
+                    <p>3DCGの作成</p>
+                    <p>ICT技術を用いた新しい教育の場の作成など</p>
+                    <p>お気軽にご相談ください</p>
+                    <br>
+                    <a href="/service.html"><p class="service"><u>サービスについて詳しく見る→</u></p></a>
+                </div>
+                <img class="pc" src="/img/teamwork-3213924_1920.webp">
+            </div>
+            <div class="fourth">
+                <h2 class="title">
+                    <span class="newsEn">NEWS</span>
+                    <span class="newsJp">ニュース</span>
+                </h2>
+                <ul class="news">
+                    <li>
+                        <a class="content">
+                            <time class="newstime">2022.12.2</time>
+                            <div>ICTLabホームページを公開!</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                //フェードインさせる要素を取得
+                const FADEIN_ELEM = document.getElementById('fadein');
+            
+                //スクロール時に要素をフェードインさせるイベントを設定する
+                window.addEventListener('scroll', () => {
+                    //フェードインする要素の上部の位置を取得する
+                    const FADEIN_ELEM_TOP = FADEIN_ELEM.getBoundingClientRect().top;
+                    //ブラウザの高さを取得
+                    const WINDOW_HEIGHT = window.innerHeight;
+                    //画面に表示された時にフェードインさせる処理
+                    if (WINDOW_HEIGHT > (FADEIN_ELEM_TOP + 280)) {
+                        FADEIN_ELEM.classList.add('fadein-after');
+                    }else{
+                        FADEIN_ELEM.classList.remove('fadein-after');
+                    }
+                });
+            </script>
+        </main>
+        <footer>
+            <h2>東洋大学付属牛久高等学校ICTLab</h2>
+            <ul>
+                <li><a href="https://www.toyo.ac.jp/ushiku/sh/access/">アクセス</a></li>
+                <li><a href="#">プライバシーポリシー</a></li>
+                <li><a href="https://www.toyo.ac.jp/ushiku/sh/">東洋大学付属牛久中等・高等学校について</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

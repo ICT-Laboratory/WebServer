@@ -1,0 +1,27 @@
+p{
+    text-align: center;
+    font-size: 50px;
+}
+*{
+    padding:0px;
+    margin:0px;
+}
+header{
+    font-size:50px;
+    text-align: center;
+}
+input{
+    font-size: 40px;
+    width:10%;
+    padding:50px;
+    max-height: 40px;
+    min-height:10px;
+    margin-top: 0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    margin-left:0px;
+
+}
+.footer{
+    height:100px;
+}
