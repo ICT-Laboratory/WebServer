@@ -4,6 +4,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import json
 import os
 
+print("aaaafeksaflneksanflkesunflakf")
+
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///app.db"
 app.config['SECRET_KEY'] = os.urandom(24)
@@ -69,25 +71,8 @@ def all_page(path):
         redirect(url_for("main"))
     if path == "service":
         return "404 Not Found Error"
-    # if path == "service":
-    #     with open("blog-database.json","r") as f:
-    #         blog_list = json.loads(f.read())
-    #         if len(blog_list) > 6:
-    #             blog_list = blog_list[:6]
-    #     return render_template(f"{path}.html",blogs=blog_list, name=path)
     return render_template(f"{path}.html",name=path)
 
-# @app.route("/service")
-# def blog():
-#     data = Blog.query.all()
-#     json_data = [{"id":i.id, "blog_id":i.blog_id, "version_id":i.version_id, "title":i.title, "text":i.text, "date":i.date, "author":i.author, "thumbnail": i.thumbnail} for i in data]
-#     return render_template("service.html",blogs=json_data, name="Service")
-
-# @app.route("/membersblog/<path>")
-# def blog_view(path):
-#     data = Blog.query.filter_by(title=path).all()
-#     print(data)
-#     return render_template("blog.html",text=data.text, name="Service")
 
 @app.route("/app/<dirname>/<filename>")
 def webapp(dirname, filename):
@@ -97,13 +82,25 @@ def webapp(dirname, filename):
 def store():
     return render_template("ECsite/home.html")
 
-@app.route("/robots.txt")
-def robots():
-    return render_template("robots.txt")
 
-@app.route("/sitemap.xml")
+@app.route("/sitemap")
 def sitemap():
-    return render_template("sitemap.xml")
+    return """<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://ict-lab.org/</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://ict-lab.org/about</loc>
+        <lastmod>2024-08-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>
+"""
 
 if __name__ == "__main__":
     app.run(port=5002, debug=False, host="0.0.0.0")
