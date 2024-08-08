@@ -64,27 +64,9 @@ def addblog():
 def home():
     return render_template("index.html", name="Home")
 
-@app.route("/<path>")
-def all_page(path):
-    print(path)
-    if path == "index":
-        redirect(url_for("main"))
-    if path == "service":
-        return "404 Not Found Error"
-    return render_template(f"{path}.html",name=path)
-
-
-@app.route("/app/<dirname>/<filename>")
-def webapp(dirname, filename):
-    return render_template(f"app/{dirname}/{filename}")
-
-@app.route("/lab/home")
-def store():
-    return render_template("ECsite/home.html")
-
 
 @app.route("/sitemap")
-def sitemap():
+def site():
     return """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
@@ -102,5 +84,13 @@ def sitemap():
 </urlset>
 """
 
+@app.route("/app/<dirname>/<filename>")
+def webapp(dirname, filename):
+    return render_template(f"app/{dirname}/{filename}")
+
+@app.route("/lab/home")
+def store():
+    return render_template("ECsite/home.html")
+
 if __name__ == "__main__":
-    app.run(port=5002, debug=False, host="0.0.0.0")
+    app.run(port=5002, debug=True, host="0.0.0.0")
