@@ -84,6 +84,10 @@ def site():
 </urlset>
 """
 
+@app.route("/<path>")
+def all_page(path):
+    return render_template(f"{path}.html")
+
 @app.route("/app/<dirname>/<filename>")
 def webapp(dirname, filename):
     return render_template(f"app/{dirname}/{filename}")
