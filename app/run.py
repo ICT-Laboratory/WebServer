@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, jsonify
+from flask import Flask, render_template, redirect, url_for, request, jsonify, Response
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import json
@@ -67,7 +67,7 @@ def home():
 
 @app.route("/sitemap")
 def site():
-    return """<?xml version="1.0" encoding="UTF-8"?>
+    sitemap_xml =  """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://ict-lab.org/</loc>
@@ -83,6 +83,7 @@ def site():
     </url>
 </urlset>
 """
+    return Response(sitemap_xml, mimetype='application/xml')
 
 @app.route("/<path>")
 def all_page(path):
