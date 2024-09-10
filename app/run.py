@@ -87,7 +87,18 @@ def site():
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_file('static/img/favicon.ico', mimetype='image/x-icon')
+    return send_file('static/img/icon.PNG', mimetype='image/x-icon')
+
+@app.route('/robots.txt')
+def robots_txt():
+    robots_txt_content = """User-agent: *
+
+Allow: /
+Allow: /about/
+
+Sitemap: https://ict-lab.org/sitemap.xml  # サイトマップのURLを指定
+"""
+    return Response(robots_txt_content, mimetype='text/plain')
 
 @app.route("/<path>")
 def all_page(path):

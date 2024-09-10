@@ -1,0 +1,6 @@
+User-agent: *
+
+Allow: /
+Allow: /about/
+
+Sitemap: https://ict-lab.org/sitemap.xml  # サイトマップのURLを指定
