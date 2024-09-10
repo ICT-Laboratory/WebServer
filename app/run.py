@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, jsonify, Response
+from flask import Flask, render_template, redirect, url_for, request, jsonify, Response, send_file
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import json
@@ -84,6 +84,10 @@ def site():
 </urlset>
 """
     return Response(sitemap_xml, mimetype='application/xml')
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_file('static/img/favicon.ico', mimetype='image/x-icon')
 
 @app.route("/<path>")
 def all_page(path):
